@@ -3,7 +3,7 @@ name: Build and Test
 on:
   push:
     branches:
-      - main
+      - jdbc
   pull_request:
     types:
       - closed
