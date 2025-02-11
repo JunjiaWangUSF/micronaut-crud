@@ -3,7 +3,7 @@ name: Build and Test
 on:
   push:
     branches:
-      - jdbc
+      - main
   pull_request:
     types:
       - closed
@@ -50,7 +50,7 @@ jobs:
         run: ./gradlew shadowJar
 
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: micronaut-crud
           path: build/libs/*.jar
